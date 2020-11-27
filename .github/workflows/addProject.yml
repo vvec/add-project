@@ -32,7 +32,7 @@ jobs:
     - name: add project with columns
       id: add-project
       # call script defined in <owner>/<repo>/<script> and by @<release> or @<branch>
-      uses: vvec/design-management/.github/actions/add-project@main
+      uses: vvec/add-project@main
       # with parameters defined ../<repo>/<script>/action.yml
       with:
         repo-token: ${{secrets.GITHUB_TOKEN}}
