@@ -38,7 +38,7 @@ async function addRepoProject(repo, projectName, projectBody ) {
   );
 
   try {
-      console.log("vars: ", JSON.stringify(queryVariables));
+      // console.log("vars: ", JSON.stringify(queryVariables));
 
       const response = await graphql(
         createProject,
@@ -112,7 +112,7 @@ async function addProjectColumn(repo, projectId, columnName ) {
   );
 
   try {
-      console.log("vars: ", JSON.stringify(queryVariables));
+      // console.log("vars: ", JSON.stringify(queryVariables));
 
       const response = await graphql(
         createColumn,
@@ -150,11 +150,9 @@ async function action (){
     
     const resultProject = await addRepoProject(repoConfig, projectName, projectBody);
     // console.log("project result: ", JSON.stringify(resultProject));
-    
-    var projID = resultProject.id;
-    // console.log(projID);
+    var resultColumn = null;
     for(const stage of stages) {
-        const resultColumn = await addProjectColumn(repoConfig, resultProject.id, stage.name)
+        resultColumn = await addProjectColumn(repoConfig, resultProject.id, stage.name)
         // console.log("project result: ", JSON.stringify(resultColumn));               
     }
     console.log("final result:\n", JSON.stringify(resultColumn));               
