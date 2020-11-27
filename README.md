@@ -21,7 +21,6 @@ This action uses:
 - the GitHub GraphQL API
 - the workflow run context.
 - the @action/core package.
-- the vvec-org/utils package to wrap the GraphQL API
 
 *NOTE* This is action is in development and is subject to change
 
