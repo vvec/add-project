@@ -1,0 +1,30 @@
+name: 'Add Project'
+description: 'Adds new project to repo, with default design stage columns'
+inputs:
+  project-name:  # input: issue number
+    description: 'name of the project'
+    required: true
+    default: 'Design Scope'
+  project-body:  # input: new label name
+    description: 'body text of the project'
+    required: true
+    default: 'triage'
+  repo-id:  # id of input
+    description: 'info for repo'
+    required: true
+    default: 'ego'
+  repo-name:  # id of input
+    description: 'info for repo'
+    required: true
+    default: 'what'
+  repo-owner:  # id of input
+    description: 'info for repo'
+    required: true
+    default: 'who'
+  repo-token:  # id of input
+    description: 'info for repo'
+    required: true
+    default: 'shhh'
+runs:
+  using: 'node12'
+  main: 'index.js'
