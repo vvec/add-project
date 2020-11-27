@@ -135,7 +135,6 @@ async function action (){
     token: null
   };
 
-  stages = JSON.parse(stages);
   console.log(JSON.stringify(stages));
 
   try {
