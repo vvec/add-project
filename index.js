@@ -116,7 +116,7 @@ async function addProjectColumn(repo, projectId, columnName ) {
 
       const response = await graphql(
         createColumn,
-         queryVariables 
+        queryVariables 
       );
       return response.addProjectColumn.project;
   } catch (err) {
