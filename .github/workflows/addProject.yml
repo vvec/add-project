@@ -25,6 +25,9 @@ jobs:
     name: adding ${{github.event.inputs.project-name}}    
     # steps executed by job
     steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '14'
     # - run: echo "Git hub context ${{toJson(github.event)}}"  # [debug] dump trigger event context info
     # execute job action(s)
     - name: add project with columns
